@@ -86,6 +86,12 @@ public class HasBadges implements Feature<HasBadges.Badges> {
         public final String borderColor() {
             return badge.getBorderColor();
         }
+
+        @JsonProperty
+        public final String link() {
+            String link = badge.getLink();
+            return link == null || link.isEmpty() ? "#" : link;
+        }
 	}
 	
 	private static class ActionFilter implements Predicate<GroovyPostbuildAction> {

@@ -39,7 +39,7 @@
                     <span class="badge"
                           data-ng-repeat="badge in project.badges track by $index"
                           data-ng-style="{ 'border': badge.border + ' solid ' + badge.borderColor, 'background': badge.background, 'color': badge.color }">
-                        {{ badge.text }}
+                          <a title="{{ badge.text }}" href="{{badge.link}}">{{ badge.text }}</a>
                     </span>
                 </li>
             </ul>
